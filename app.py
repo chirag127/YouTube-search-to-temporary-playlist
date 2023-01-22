@@ -58,6 +58,7 @@ def main():
     # Get video URLs and create playlist
     if st.button("Create Playlist"):
         video_ids = []
+        for page in range(1, 3):
             video_ids.extend(search_videos(search_term, page))
         if video_ids:
             playlist_url = create_playlist(video_ids)
